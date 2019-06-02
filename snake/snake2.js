@@ -1,12 +1,15 @@
-var snake = [66, 65, 64];
-var direction = 1;
-var food = 250;
+var snake;
+var direction;
+var food;
 var canv = document.getElementById("canv").getContext("2d");
 var btn = document.getElementById("btn");
 function ready(){
   for (let i = 0; i < 400; i++) {
     draw(i, '#313131')
   }
+  snake = [66, 65, 64];
+  direction = 1;
+  food = 250;
   draw(66, 'blue');
   draw(65, 'blue');
   draw(64, 'blue');
@@ -38,12 +41,19 @@ function handledirection(e){
 }
 
 function run(){
+  btn.setAttribute("disabled","disabled");
   var n = snake[0] + direction;
   snake.unshift(n);
-  if(snake.indexOf(n, 1) !== -1 ||
-    n > 399 || n < 0 
-  ){
+  if (
+    snake.indexOf(n, 1) !== -1 ||
+    n > 399 ||
+    n < 0 ||
+    (direction == -1 && n % 20 == 19) ||
+    (direction == 1 && n % 20 == 0)
+  ) {
     ready();
+    btn.removeAttribute("disabled");
+    return alert("游戏结束");
   }
   draw(n, "blue");
   if(n == food){

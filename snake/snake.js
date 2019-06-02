@@ -65,3 +65,4 @@ function run() {
   }
   setTimeout(arguments.callee, 500);
 }
+btn.addEventListener("click", run);
