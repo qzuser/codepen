@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#slideshow{
+  width: 800px;  
+  height: 350px;
+  margin: 0 auto; /*设置在页面水平居中*/
+  overflow: hidden;
+  position: relative;  
+}
+#slideshow img{
+  width: 800px;
+  position: absolute; /*图片采取绝对定位，均位于左上角，重叠在一起*/
+  top: 0;
+  left: 0;
+  opacity: 0; /*初始不透明度为0，图片都看不见*/
+  transition: opacity 1s linear; /*--重点--定义一个关于透明度的transition*/
+}
+#slideshow img.active{
+  opacity: 1; /*有active类的图片不透明度为1，即显示图片*/
+}
+/*-- 设置页码的样式 --*/
+#slideshow div{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  padding: 5px;
+  margin-left: -57.5px; /*水平居中，算出来宽度是115px*/
+  border-radius: 25px;
+  background: rgba(255,255,255,0.3);
+}
+#slideshow span{
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px; /*设置页码为圆形*/
+  margin: 0 10px;
+  background: white;
+}
+#slideshow span.active{
+  background: #FFDD55;
+}
+
+
+
+/*-- 设置左右按钮框的样式 --*/
+#slideshow p{
+  width: 30px;
+  line-height: 80px;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px; /*设置垂直居中*/
+  color: white;
+  background: rgba(0,0,0,0.2);
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer; /*设置鼠标*/
+  /*设置不能选择文本*/
+  -ms-user-select:none;/*IE10*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  user-select:none;
+  display: none;
+}
+#slideshow p.left{
+  left: 0;
+}
+#slideshow p.right{
+  right: 0;
+}
+#slideshow:hover p{
+  display: block;
+}
+#slideshow p:hover{
+  background: rgba(0,0,0,0.6);  
+}
