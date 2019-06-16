@@ -26,7 +26,7 @@
   bottom: 10px;
   left: 50%;
   padding: 5px;
-  margin-left: -57.5px; /*水平居中，算出来宽度是115px*/
+  margin-left: -57.5px; /*水平居中，算出来宽度是115px*//**********还可以这样设置水平居中*************/
   border-radius: 25px;
   background: rgba(255,255,255,0.3);
 }
@@ -50,7 +50,7 @@
   line-height: 80px;
   position: absolute;
   top: 50%;
-  margin-top: -40px; /*设置垂直居中*/
+  margin-top: -40px; /*设置垂直居中*//******************可以这样设置垂直居中长见识了***********************/
   color: white;
   background: rgba(0,0,0,0.2);
   font-size: 16px;
