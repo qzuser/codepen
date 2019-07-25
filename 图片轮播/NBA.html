@@ -8,25 +8,19 @@
   <link rel="stylesheet" href="./NBA.css">
 </head>
 <body>
-  <div class="slideshow">
-    <div class="pics">
-      <img class="active" src="./nba/1.png" alt="0.0">
-      <img src="./nba/2.png" alt="0.0">
-      <img src="./nba/3.png" alt="0.0">
-      <img src="./nba/4.png" alt="0.0">
-    </div>
-
+  <div class="wrap">
+    <img  class="active" src="./nba/1.png" alt="1">
+    <img   src="./nba/2.png" alt="2">
+    <img   src="./nba/3.png" alt="3">
+    <img   src="./nba/4.png" alt="4">
     <div class="page">
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <span data-page="0" class="active"></span>
+      <span data-page="1"></span>
+      <span data-page="2"></span>
+      <span data-page="3"></span>
     </div>
-
-    <div class="swap">
-      <span class="left">&lt;</span>
-      <span class="right">&gt;</span>
-    </div>
+    <p class="left">&lt;</p>
+    <p class="right">&gt;</p>
   </div>
   <script src="./NBA.js"></script>
 </body>

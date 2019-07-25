@@ -1,7 +1,74 @@
-.slideshow{
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  height: 160px;
+}
+.wrap{
+  width: 600px;
+  height: 500px;
+  position: relative;
+  border: 5px solid #000;
+}
+img{
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+img.active{
+  opacity: 1;
+}
+.page{
+  width: 600px;
+  height: 10px;
+  position: absolute;
+  bottom: 30px;
+  padding-left: 120px;
+}
+.page span{
+  width: 50px;
+  height: 10px;
+  float: left;
+  margin: 0 20px;
+  border: 1px solid gray;
+}
+.page span.active{
+  background-color: yellow;
+}
+p{
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+p.left{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50px;
+  width: 30px;
+  border: 1px solid gray;
+  background-color:rgb(0, 0, 0, .2);
+}
+p.right{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 50px;
+  width: 30px;
+  border: 1px solid gray;
+  background-color:rgb(0, 0, 0, .2);
+}
+p.left:hover{
+  background-color:rgb(0, 0, 0, 1);
+}
+p.right:hover{
+  background-color:rgb(0, 0, 0, 1);
 }
